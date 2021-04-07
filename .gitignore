@@ -1,0 +1,8 @@
+.DS_STORE
+
+frontend/CallACarApp/dist/
+frontend/CallACarApp/bazel-out
+frontend/CallACarApp/integration/bazel/bazel-*
+frontend/CallACarApp/*.log
+frontend/CallACarApp/node_modules
+
