@@ -1,0 +1,36 @@
+span.p-input-icon-left {
+    input {
+        min-width: 300px;
+    }
+    min-width: 300px;
+}
+
+.pi-spinner {
+    font-size: small;
+}
+
+.btn:disabled {
+    color: lightgrey;
+    border-color: lightgrey;
+}
+
+.message-block .error-message {
+    // Hidden by default
+    display: none;
+}
+
+// .container-fluid {
+//         background: $secondary;
+// }
+
+.logincontainer {
+    background: white;
+}
+
+// .componentcontainer {
+//     background: $secondary;
+// }
+
+.message-block .error-message:first-child {
+    display: block;
+}

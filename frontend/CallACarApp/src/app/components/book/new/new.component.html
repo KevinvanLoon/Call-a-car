@@ -1,0 +1,51 @@
+<div class="componentcontainer  mr-2 ml-2 mr-md-0 ml-md-0 pt-5">
+    <div class="logincontainer container rounded pt-4 pb-4">
+        <div class="row">
+            <!-- Header -->
+            <div class="col-12 text-center">
+                <h3>New booking</h3>
+            </div>
+            <form class="col-12" [formGroup]="addForm">
+                <div class="col-12 text-center mt-4">
+                    <input class="text-center" style="text-align:center" type="text" pInputText placeholder="Destination" formControlName="destination">
+                </div>
+                <div class="col-12 text-center mt-4">
+                    <p-dropdown autoWidth="false" [options]="inventoryService.carBrands" formControlName="carBrand"
+                        placeholder="Select a car brand"></p-dropdown>
+                </div>
+                <div class="col-12 text-center mt-4">
+                    <p-dropdown autoWidth="false" [options]="inventoryService.carTypes" formControlName="carType"
+                        placeholder="Select a car type"></p-dropdown>
+                </div>
+                <div class="col-12 text-center mt-4">
+                    <div class="row">
+                        <div class="col-2">
+                            <p-checkbox formControlName="driversLicense" binary="true" inputId="binary"></p-checkbox>
+
+                        </div>
+                        <div class="col-10 text-left ">
+                            <label for="binary">I have a drivers license</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 justify-content-center mt-4">
+                    <div class="row">
+                        <div class="col-2">
+                            <p-checkbox formControlName="wheelchair" binary="true" inputId="binary"></p-checkbox>
+                        </div>
+                        <div class="col-10 text-left ">
+                            <label for="binary">I need wheelchair facilities </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 justify-content-center  mt-2 mb-2">
+                    <button type="button" style="width: 300px;" class="btn btn-outline-primary"
+                        [disabled]="(!addForm.valid)" (click)="submit()">
+                        Book
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
