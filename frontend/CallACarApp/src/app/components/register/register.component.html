@@ -1,0 +1,67 @@
+<div class="componentcontainer  mr-2 ml-2 mr-md-0 ml-md-0 pt-5">
+    <div class="logincontainer container rounded pt-4 pb-4">
+        <div class="row">
+            <!-- Header -->
+            <div class="col-12 text-center">
+                <h3>Register</h3>
+            </div>
+            <form class="col-12"  [formGroup]="loginForm">
+                <div class="col-12 text-center mt-4">
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-envelope"></i>
+                        <input type="text" pInputText placeholder="Email" formControlName="email">
+                    </span>
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-lock"></i>
+                        <input pPassword type="password" placeholder="Password" [feedback]="false"  formControlName="password">
+                    </span>
+                </div>
+                <div class="col-12 text-center mt-2 mb-2">
+                    <button type="button" style="width: 300px;" class="btn btn-outline-primary" [disabled]="(!loginForm.valid)" (click)="submit()">
+                        Log in
+                    </button>
+                </div>
+                <div class="col-12 text-center mt-1">
+                    <div class="message-block">
+                        <!-- Email errors -->
+                        <span class="error-message p-invalid"
+                            *ngIf="(loginForm.get('email').hasError('required') && loginForm.controls.email.dirty && loginForm.controls.email.touched)">
+                            Email is required.
+                        </span>
+                        <!-- Password errors -->
+                        <span class="error-message p-invalid"
+                            *ngIf="(loginForm.get('password').hasError('required') && loginForm.controls.password.dirty && loginForm.controls.password.touched)">
+                            A password is required.
+                        </span>
+                    </div>
+                </div>
+            </form>
+            <hr style="width: 300px;">
+            <div class="col-12 d-flex justify-content-center" style="width: 300px;">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="text-muted">Or login with</p>
+                    </div>
+                    <div class="col-12 text-center">
+                        <a class="btn btn-outline-dark" role="button"
+                            style="width: 200px;" (click)="navigate()">
+                            <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                            Google
+                        </a>
+                    </div>
+                    <div class="col-12 text-center mt-2">
+                        <a class="btn btn-outline-dark" role="button"
+                            style="width: 200px;" (click)="navigate()">
+                            <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Facebook sign-in"
+                                src="https://upload.wikimedia.org/wikipedia/commons/c/c2/F_icon.svg" />
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container rounded pt-3">
+    <div class="row">
+        <div class="col-12  text-center ">
+            <h4>Call-a-car</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container rounded pt-3">
+    <div class="row">
+        <div class="col-12  text-center ">
+            <h4>Previous bookings</h4>
+        </div>
+    </div>
+</div>
+<div class="container pt-2 text-center">
+    <div class="row" *ngFor="let reservation of reservations">
+        <div class="col-12 mt-2">
+            <button class="btn btn-info" (click)="toConfirmation(reservation)">
+                {{reservation.destination}}
+            </button>
+        </div>
+    </div>
+</div>
+<div class="container rounded pt-3">
+    <div class="row">
+        <div class="col-12  text-center ">
+            <h4>New destination</h4>
+        </div>
+    </div>
+</div>
+<div class="container pt-2 text-center">
+    <div class="row">
+        <div class="col-12 mt-2">
+            <button class="btn btn-info">
+                New booking
+            </button>
+        </div>
+    </div>
+</div>

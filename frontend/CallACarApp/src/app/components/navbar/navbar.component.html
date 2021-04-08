@@ -1,0 +1,33 @@
+<nav class="navbar navbar-dark navbar-expand-lg bg-transparant">
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggler" aria-controls="toggler"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="toggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li *ngIf="authService.loggedIn.value && authService.userRole.value === 'user'" class="nav-item">
+                <a class="nav-link" [routerLink]="['/home']">Home</a>
+            </li>
+            <li *ngIf="authService.loggedIn.value"  class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link" [routerLink]="['/history']">History</a>
+            </li>
+            <li *ngIf="authService.loggedIn.value && authService.userRole.value === 'admin'" class="nav-item">
+                <a class="nav-link" [routerLink]="['/admin']">Admin</a>
+            </li>
+            <li *ngIf="authService.loggedIn.value"  class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link" [routerLink]="['/login']">Logout</a>
+            </li>
+            <li  *ngIf="!authService.loggedIn.value" class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link" [routerLink]="['/login']">Login</a>
+            </li>
+        </ul>
+        <ul *ngIf="authService.userName.value"class="nav navbar-nav navbar-right">
+            <li class="nav-item" [routerLinkActive]="['active']">
+               <a class="nav-link" style="color:white"> Hi, {{authService.userName.value}}</a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,15 @@
+<div class="container rounded pt-5">
+    <div class="row">
+        <div class="col-12  text-center ">
+            <h4>A car is on its way to your location</h4>
+            <p>
+                Details <br>
+                Car : {{reservation.car.brand}} {{reservation.car.type}}<br>
+                From : {{reservation.pickupPoint}} <br>
+                To : {{reservation.destination}}
+            </p>
+
+            <button class="btn btn-primary" [routerLink]="['/home']">Back to homepage</button>
+        </div>
+    </div>
+</div>
