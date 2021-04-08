@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { HistoryComponent } from './components/history/history.component';
@@ -17,6 +17,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { BookComponent } from './components/book/book.component';
 import { ConfirmationComponent } from './components/book/confirmation/confirmation.component';
+import { NewComponent } from './components/book/new/new.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +29,12 @@ import { ConfirmationComponent } from './components/book/confirmation/confirmati
     NavbarComponent,
     AdminComponent,
     BookComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    NewComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     NgPrimeModule,
     AppRoutingModule,
     HttpClientModule,

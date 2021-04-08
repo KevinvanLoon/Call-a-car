@@ -20,6 +20,8 @@ export class BookComponent implements OnInit {
   }
 
   toConfirmation(reservation) {
+
+    this.reservationService.add(reservation);
     this.router.navigate(['/book/confirmation'], {state : { reservation: reservation}});
   }
 
