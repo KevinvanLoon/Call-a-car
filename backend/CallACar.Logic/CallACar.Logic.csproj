@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CallACar.Repository\CallACar.Repository.csproj" />
+      <ProjectReference Include="..\CallACarr.Domain\CallACarr.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

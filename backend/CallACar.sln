@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallACar.API", "CallACar.API\CallACar.API.csproj", "{FC8D969E-DB3C-4366-9934-F903349579B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallACarr.Domain", "CallACarr.Domain\CallACarr.Domain.csproj", "{2470743D-B167-409B-A20D-34528EFF7885}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallACar.Repository", "CallACar.Repository\CallACar.Repository.csproj", "{2050DB60-D278-41CB-9E79-43DE3A1760A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallACar.Logic", "CallACar.Logic\CallACar.Logic.csproj", "{9BF35699-7A39-495D-B1A4-C995D9D13A67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC8D969E-DB3C-4366-9934-F903349579B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8D969E-DB3C-4366-9934-F903349579B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8D969E-DB3C-4366-9934-F903349579B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8D969E-DB3C-4366-9934-F903349579B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2470743D-B167-409B-A20D-34528EFF7885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2470743D-B167-409B-A20D-34528EFF7885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2470743D-B167-409B-A20D-34528EFF7885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2470743D-B167-409B-A20D-34528EFF7885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2050DB60-D278-41CB-9E79-43DE3A1760A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2050DB60-D278-41CB-9E79-43DE3A1760A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2050DB60-D278-41CB-9E79-43DE3A1760A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2050DB60-D278-41CB-9E79-43DE3A1760A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BF35699-7A39-495D-B1A4-C995D9D13A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BF35699-7A39-495D-B1A4-C995D9D13A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BF35699-7A39-495D-B1A4-C995D9D13A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BF35699-7A39-495D-B1A4-C995D9D13A67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
