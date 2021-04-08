@@ -13,5 +13,7 @@ namespace CallACarr.Domain
 
         public int UserId { get; set; }
         public User User { get; set; }
+
+        public Decimal Amount { get; set; }
     }
 }

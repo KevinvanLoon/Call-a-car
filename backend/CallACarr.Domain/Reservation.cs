@@ -10,6 +10,9 @@ namespace CallACarr.Domain
         public DateTime From { get; set; }
         public DateTime To { get; set; }
 
+        public User User { get; set; }
+        public int UserId { get; set; }
+
         public int kmsDriven { get; set; } //should be filled after driving (for history)
     }
 }
