@@ -1,4 +1,5 @@
 ﻿using CallACar.Logic;
+using CallACarr.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CallACar.API.Controllers
@@ -11,31 +12,34 @@ namespace CallACar.API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return new OkObjectResult("NOT IMPLEMENTED");
+            return new OkObjectResult(_carLogic.GetCars());
         }
         
         [HttpGet("{id}")]
         public IActionResult GetSingle(int id)
         {
-            return new OkObjectResult("NOT IMPLEMENTED");
+            return new OkObjectResult(_carLogic.GetCarById(id));
         }
         
         [HttpPost]
-        public IActionResult Add()
+        public IActionResult Add([FromBody] Car car)
         {
-            return new OkObjectResult("NOT IMPLEMENTED");
+            this._carLogic.AddCar(car);
+            return new OkResult();
         }
         
         [HttpPut("{id}")]
-        public IActionResult Update()
+        public IActionResult Update(int id, [FromBody] Car car)
         {
-            return new OkObjectResult("NOT IMPLEMENTED");
+            this._carLogic.Update(id, car);
+            return new OkResult();
         }
         
         [HttpDelete("{id}")]
-        public IActionResult Delete()
+        public IActionResult Delete(int id)
         {
-            return new OkObjectResult("NOT IMPLEMENTED");
+            this._carLogic.Remove(id);
+            return new OkResult();
         }
     }
 }

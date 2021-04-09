@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using CallACar.Repository;
 using CallACarr.Domain;
 
@@ -7,30 +8,30 @@ namespace CallACar.Logic
 {
     public class CarLogic
     {
-        private AbstractRepository<Car> _carRepository = new CarRepository();
+        private CarRepository _carRepository = new CarRepository();
 
         public IList<Car> GetCars()
         {
-            throw new NotImplementedException();
+            return this._carRepository.Get().ToList();
         }
 
         public Car GetCarById(int carId)
         {
-            throw new NotImplementedException();
+            return this._carRepository.GetSingle(carId);
         }
         
         public void AddCar(Car car){
-            throw new NotImplementedException();
+            this._carRepository.Add(car);
         }
 
         public void Update(int carId, Car car)
         {
-            throw new NotImplementedException();
+            this._carRepository.Update(carId, car);
         }
 
         public void Remove(int carId)
         {
-            throw new NotImplementedException();
+            this._carRepository.Delete(carId);
         }
     }
 }

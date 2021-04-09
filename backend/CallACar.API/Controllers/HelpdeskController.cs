@@ -1,4 +1,6 @@
-﻿using CallACar.Logic;
+﻿using System;
+using System.Linq;
+using CallACar.Logic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CallACar.API.Controllers
@@ -11,7 +13,8 @@ namespace CallACar.API.Controllers
         [HttpGet]
         public IActionResult GetHistoryFromUser([FromQuery] int userId)
         {
-            return new OkObjectResult("NOT IMPLEMENTED");
+            // in advance there should be a check if I have got 
+            return new OkObjectResult(this._reservationLogic.GetMyReservations(userId).Where(r => r.To < DateTime.Today));
         }
 
         [HttpPost]

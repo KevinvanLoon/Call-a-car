@@ -6,7 +6,12 @@ namespace CallACar.Repository
 {
     public class ReservationRepository : AbstractRepository<Reservation>
     {
-        public IQueryable<Reservation> GetReservationsByUser()
+        
+        public ReservationRepository(){
+            Entities = DatabaseMock.Reservations.ToList();
+        }
+        
+        public IQueryable<Reservation> GetReservationsByUser(int userId)
         {
             throw new NotImplementedException();
         }

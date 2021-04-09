@@ -7,12 +7,12 @@ namespace CallACar.API.Controllers
     [Route("/statistics")]
     public class StatisticsController: Controller
     {
-        private ReservationLogic _reservationLogic = new ReservationLogic();
+        private StatisticsLogic _statisticsLogic = new StatisticsLogic();
 
         [HttpGet]
         public IActionResult GetAggregateData(DateTime from, DateTime to)
         {
-            return new OkObjectResult("NOT IMPLEMENTED");
+            return new OkObjectResult(this._statisticsLogic.GetAggregatedData(from, to));
         }
     }
 }

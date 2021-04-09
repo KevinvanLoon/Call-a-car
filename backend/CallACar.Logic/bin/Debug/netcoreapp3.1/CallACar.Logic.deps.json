@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CallACar.Logic/1.0.0": {
+        "dependencies": {
+          "CallACar.Repository": "1.0.0",
+          "CallACarr.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CallACar.Logic.dll": {}
+        }
+      },
+      "CallACar.Repository/1.0.0": {
+        "dependencies": {
+          "CallACarr.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CallACar.Repository.dll": {}
+        }
+      },
+      "CallACarr.Domain/1.0.0": {
+        "runtime": {
+          "CallACarr.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CallACar.Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CallACar.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CallACarr.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

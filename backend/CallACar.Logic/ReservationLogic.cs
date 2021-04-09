@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using CallACar.Repository;
 using CallACarr.Domain;
 
@@ -7,21 +8,21 @@ namespace CallACar.Logic
 {
     public class ReservationLogic
     {
-        private AbstractRepository<Reservation> _reservationRepository = new ReservationRepository();
+        private ReservationRepository _reservationRepository = new ReservationRepository();
         
         public IList<Reservation> GetMyReservations(int userId)
         {
-            throw new NotImplementedException();
+            return this._reservationRepository.GetReservationsByUser(userId).ToList();
         }
 
-        public void Reserve(int carId, DateTime from, DateTime to)
+        public void Reserve(Reservation reservation)
         {
-            throw new NotImplementedException();
+            this._reservationRepository.Add(reservation);
         }
 
         public void DeleteReservation(int reservationId)
         {
-            throw new NotImplementedException();
+            this._reservationRepository.Delete(reservationId);
         }
     }
 }
