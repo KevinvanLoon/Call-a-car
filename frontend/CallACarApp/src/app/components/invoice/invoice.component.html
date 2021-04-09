@@ -1,0 +1,43 @@
+<div *ngIf="reservations.length > 0">
+
+
+    <div class="container rounded pt-5">
+        <div class="row">
+            <div class="col-12  text-center ">
+                <h4>Invoices</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container rounded ">
+        <div class="row">
+            <div class="col-12  text-center ">
+                <p>Price : <b>{{kmDriven * pricePerKm}},-</b> </p>
+                <p>Price per kilometer : {{pricePerKm}} </p>
+                <p>Kilometers driven : {{kmDriven}} </p>
+                <button class="btn btn-success" (click)="pay()">Pay</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt-4">
+        <div class="col-12  text-center ">
+            <h4>Trips</h4>
+        </div>
+    </div>
+    <div class="container pt-2">
+        <ul class="list-group">
+            <li class="list-group-item text-center" *ngFor="let reservation of reservations">
+                From {{reservation.pickupPoint}} to {{reservation.destination}} with a {{reservation.car.brand}}
+                {{reservation.car.type}}
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div *ngIf="reservations.length === 0"> 
+    <div class="row">
+        <div class="col-12  text-center ">
+            <h4>No open invoices</h4>
+        </div>
+    </div>
+</div>

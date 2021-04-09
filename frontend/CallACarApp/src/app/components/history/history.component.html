@@ -1,0 +1,49 @@
+<div class="container rounded pt-3">
+    <div class="row">
+        <div class="col-12  text-center ">
+            <h4>History</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-2">
+    <ul class="list-group">
+        <li class="list-group-item text-center" *ngFor="let historyItem of history">
+            From {{historyItem.pickupPoint}} to {{historyItem.destination}} with a {{historyItem.car.brand}}
+            {{historyItem.car.type}}
+        </li>
+    </ul>
+</div>
+ <hr>
+
+<div *ngIf="request">
+    <div class="container rounded pt-3">
+        <div class="row">
+            <div class="col-12  text-center ">
+                <h4>An employee wants to see your history</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center pb-5 mb-5">
+        <div class="row pt-3">
+            <div class="col-6 text-center">
+                <button style="min-width: 125px;" class="btn btn-success" (click)="request = false">Accept</button>
+            </div>
+            <div class="col-6 justify-content-center">
+                <button style="min-width: 125px;" class="btn btn-danger" (click)="request = false">Deny</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!request">
+    <div class="container rounded pt-3 pb-5 mb-5">
+        <div class="row">
+            <div class="col-12  text-center ">
+                <h5>The employee has been notified</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
