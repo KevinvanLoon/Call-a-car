@@ -10,4 +10,5 @@ export class Reservation {
     public from: Date;
     public to: Date;
     public kilometersDriven: number;
+    public paid: boolean;
 }

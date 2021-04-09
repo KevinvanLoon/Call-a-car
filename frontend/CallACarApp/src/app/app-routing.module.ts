@@ -1,3 +1,4 @@
+import { InvoiceComponent } from './components/invoice/invoice.component';
 import { NewComponent } from './components/book/new/new.component';
 import { ConfirmationComponent } from './components/book/confirmation/confirmation.component';
 import { BookComponent } from './components/book/book.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'book', component: BookComponent, canActivate:[AuthenticatedGuard]},
   {path: 'book/confirmation', component: ConfirmationComponent, canActivate:[AuthenticatedGuard]},
   {path: 'book/new', component: NewComponent, canActivate:[AuthenticatedGuard]},
+  {path: 'pay', component: InvoiceComponent, canActivate:[AuthenticatedGuard]},
   {path: 'history', component: HistoryComponent, canActivate:[AuthenticatedGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},

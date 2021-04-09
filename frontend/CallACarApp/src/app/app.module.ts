@@ -18,6 +18,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { BookComponent } from './components/book/book.component';
 import { ConfirmationComponent } from './components/book/confirmation/confirmation.component';
 import { NewComponent } from './components/book/new/new.component';
+import { InvoiceComponent } from './components/invoice/invoice.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NewComponent } from './components/book/new/new.component';
     AdminComponent,
     BookComponent,
     ConfirmationComponent,
-    NewComponent
+    NewComponent,
+    InvoiceComponent
   ],
   imports: [
     BrowserModule,

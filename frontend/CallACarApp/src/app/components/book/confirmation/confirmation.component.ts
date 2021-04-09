@@ -11,8 +11,6 @@ export class ConfirmationComponent implements OnInit {
 
   reservation: Reservation;
   constructor(private router:Router) {
-    console.log(this.router.getCurrentNavigation())
-    console.log(this.router.getCurrentNavigation().extras)
     this.reservation = this.router.getCurrentNavigation().extras.state.reservation;
    }
 
