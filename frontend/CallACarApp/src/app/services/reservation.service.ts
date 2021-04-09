@@ -1,3 +1,4 @@
+import { AuthService } from './auth.service';
 import { User } from './../models/user.model';
 import { Reservation } from './../models/reservation.model';
 import { Injectable } from '@angular/core';
@@ -8,6 +9,8 @@ import { Car } from '../models/car.model';
 
 export class ReservationService {
 
+    constructor(private authService : AuthService) {}
+
     car : Car =   {
         id: 1,
         brand: "Tesla",
@@ -16,12 +19,7 @@ export class ReservationService {
         numberPlate: "XYZ-XYZ"
     }
 
-    user : User = {
-        id: 1,
-        username: "user",
-        email: "user@user.nl",
-        hasDriversLicense: true
-    }
+    user : User = this.authService.normalUser;
 
     reservations: Reservation[] = [
         {
@@ -32,7 +30,8 @@ export class ReservationService {
             pickupPoint: "Station Breda",
             from: new Date(),
             to: new Date(),
-            kilometersDriven: 10
+            kilometersDriven: 10,
+            paid: false
         },
         {
             id:2,
@@ -42,7 +41,8 @@ export class ReservationService {
             pickupPoint: "Station Breda",
             from: new Date(),
             to: new Date(),
-            kilometersDriven: 10
+            kilometersDriven: 10,
+            paid: false
         },
         {
             id:1,
@@ -52,7 +52,8 @@ export class ReservationService {
             pickupPoint: "Station Breda",
             from: new Date(),
             to: new Date(),
-            kilometersDriven: 10
+            kilometersDriven: 10,
+            paid: false
         },
         {
             id:2,
@@ -62,7 +63,8 @@ export class ReservationService {
             pickupPoint: "Station Breda",
             from: new Date(),
             to: new Date(),
-            kilometersDriven: 10
+            kilometersDriven: 10,
+            paid: false
         },    {
             id:1,
             car: this.car,
@@ -71,7 +73,8 @@ export class ReservationService {
             pickupPoint: "Station Breda",
             from: new Date(),
             to: new Date(),
-            kilometersDriven: 10
+            kilometersDriven: 10,
+            paid: false
         },
         {
             id:2,
@@ -81,7 +84,8 @@ export class ReservationService {
             pickupPoint: "Station Breda",
             from: new Date(),
             to: new Date(),
-            kilometersDriven: 10
+            kilometersDriven: 10,
+            paid: false
         }
     ]
 
@@ -99,5 +103,11 @@ export class ReservationService {
 
     add(reservation: Reservation) {
         this.reservations.push(reservation);
+    }
+
+    pay() {
+        this.reservations.forEach((r => {
+            r.paid = true;
+        }))
     }
 }
