@@ -36,8 +36,8 @@ jobs:
         uses: MirageNet/nunit-reporter@v1.0.5
         with:
           # github token
-          access-token: 
+          access-token: not here
           # glob to junit xml files
-      path: 
-      # max number of failed tests to include
-      numFailures: # optional, default is 30
+          path: noexisting
+          # max number of failed tests to include
+          numFailures: 30 # optional, default is 30
