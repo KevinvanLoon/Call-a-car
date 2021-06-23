@@ -10,7 +10,7 @@ namespace CallACar.API.Controllers
         private StatisticsLogic _statisticsLogic = new StatisticsLogic();
 
         [HttpGet]
-        public IActionResult GetAggregateData(DateTime from, DateTime to)
+        public IActionResult GetAggregateData(DateTime from, DateTime to = new DateTime())
         {
             return new OkObjectResult(this._statisticsLogic.GetAggregatedData(from, to));
         }
